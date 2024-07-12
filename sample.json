@@ -1,0 +1,27 @@
+{
+	"id": 1234567890,
+	"name": "John Doe",
+	"email": "johndoe@example.com",
+	"age": 30,
+	"is_active": true,
+	"balance": 1234.56,
+	"tags": ["customer", "premium", "verified"],
+	"address": {
+	  "street": "123 Main St",
+	  "city": "Anytown",
+	  "country": "USA",
+	  "zip": "12345"
+	},
+	"orders": [
+	  {
+		"order_id": "ORD-001",
+		"total": 99.99,
+		"items": ["item1", "item2", "item3"]
+	  },
+	  {
+		"order_id": "ORD-002",
+		"total": 149.99,
+		"items": ["item4", "item5"]
+	  }
+	]
+  }
