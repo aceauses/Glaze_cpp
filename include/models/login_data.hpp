@@ -819,7 +819,21 @@ struct BankInventory {
 			"bank_item425_id", &T::bank_item425_id, "bank_item426_id",
 			&T::bank_item426_id, "bank_item427_id", &T::bank_item427_id,
 			"bank_item428_id", &T::bank_item428_id, "bank_item429_id",
-			&T::bank_item429_id, "bank_item430_id", &T::bank_item430_id);
+			&T::bank_item429_id, "bank_item430_id", &T::bank_item430_id,
+			"bank_item431_id", &T::bank_item431_id, "bank_item432_id",
+			&T::bank_item432_id, "bank_item433_id", &T::bank_item433_id,
+			"bank_item434_id", &T::bank_item434_id, "bank_item435_id",
+			&T::bank_item435_id, "bank_item436_id", &T::bank_item436_id,
+			"bank_item437_id", &T::bank_item437_id, "bank_item438_id",
+			&T::bank_item438_id, "bank_item439_id", &T::bank_item439_id,
+			"bank_item440_id", &T::bank_item440_id, "bank_item441_id",
+			&T::bank_item441_id, "bank_item442_id", &T::bank_item442_id,
+			"bank_item443_id", &T::bank_item443_id, "bank_item444_id",
+			&T::bank_item444_id, "bank_item445_id", &T::bank_item445_id,
+			"bank_item446_id", &T::bank_item446_id, "bank_item447_id",
+			&T::bank_item447_id, "bank_item448_id", &T::bank_item448_id,
+			"bank_item449_id", &T::bank_item449_id, "bank_item450_id",
+			&T::bank_item450_id);
 	};
 };
 
@@ -1419,12 +1433,10 @@ struct GuildCompetitionData {
 	std::vector<std::string> worldboss_start_times;
 };
 
-enum class ServerId : int { PL33 };
-
 struct GuildMember {
 	int64_t     id;
 	int64_t     user_id;
-	ServerId    server_id;
+	std::string server_id;
 	std::string name;
 	std::string gender;
 	int64_t     level;
@@ -1444,84 +1456,84 @@ struct GuildMember {
 };
 
 struct Hideout {
-	int64_t  id;
-	int64_t  character_id;
-	int64_t  hideout_points;
-	int64_t  current_level;
-	int64_t  idle_worker_count;
-	int64_t  max_worker_count;
-	int64_t  ts_time_worker_expires;
-	int64_t  current_resource_glue;
-	int64_t  max_resource_glue;
-	int64_t  current_resource_stone;
-	int64_t  max_resource_stone;
-	int64_t  current_attacker_units;
-	int64_t  max_attacker_units;
-	int64_t  current_defender_units;
-	int64_t  max_defender_units;
-	int64_t  current_opponent_id;
-	ServerId current_opponent_server_id;
-	bool     current_opponent_chest_reward;
-	int64_t  ts_last_opponent_refresh;
-	int64_t  active_battle_id;
-	int64_t  ts_last_lost_attack;
-	int64_t  current_worker_level;
-	int64_t  current_wall_level;
-	int64_t  current_barracks_level;
-	int64_t  max_barracks_level;
-	int64_t  current_gem_production_level;
-	int64_t  current_broker_level;
-	int64_t  current_robot_storage_level;
-	int64_t  room_slot_0_0;
-	int64_t  room_slot_0_1;
-	int64_t  room_slot_0_2;
-	int64_t  room_slot_0_3;
-	int64_t  room_slot_0_4;
-	int64_t  room_slot_1_0;
-	int64_t  room_slot_1_1;
-	int64_t  room_slot_1_2;
-	int64_t  room_slot_1_3;
-	int64_t  room_slot_1_4;
-	int64_t  room_slot_2_0;
-	int64_t  room_slot_2_1;
-	int64_t  room_slot_2_2;
-	int64_t  room_slot_2_3;
-	int64_t  room_slot_2_4;
-	int64_t  room_slot_3_0;
-	int64_t  room_slot_3_1;
-	int64_t  room_slot_3_2;
-	int64_t  room_slot_3_3;
-	int64_t  room_slot_3_4;
-	int64_t  room_slot_4_0;
-	int64_t  room_slot_4_1;
-	int64_t  room_slot_4_2;
-	int64_t  room_slot_4_3;
-	int64_t  room_slot_4_4;
-	int64_t  room_slot_5_0;
-	int64_t  room_slot_5_1;
-	int64_t  room_slot_5_2;
-	int64_t  room_slot_5_3;
-	int64_t  room_slot_5_4;
-	int64_t  room_slot_6_0;
-	int64_t  room_slot_6_1;
-	int64_t  room_slot_6_2;
-	int64_t  room_slot_6_3;
-	int64_t  room_slot_6_4;
-	int64_t  room_slot_7_0;
-	int64_t  room_slot_7_1;
-	int64_t  room_slot_7_2;
-	int64_t  room_slot_7_3;
-	int64_t  room_slot_7_4;
-	int64_t  room_slot_8_0;
-	int64_t  room_slot_8_1;
-	int64_t  room_slot_8_2;
-	int64_t  room_slot_8_3;
-	int64_t  room_slot_8_4;
-	int64_t  room_slot_9_0;
-	int64_t  room_slot_9_1;
-	int64_t  room_slot_9_2;
-	int64_t  room_slot_9_3;
-	int64_t  room_slot_9_4;
+	int64_t     id;
+	int64_t     character_id;
+	int64_t     hideout_points;
+	int64_t     current_level;
+	int64_t     idle_worker_count;
+	int64_t     max_worker_count;
+	int64_t     ts_time_worker_expires;
+	int64_t     current_resource_glue;
+	int64_t     max_resource_glue;
+	int64_t     current_resource_stone;
+	int64_t     max_resource_stone;
+	int64_t     current_attacker_units;
+	int64_t     max_attacker_units;
+	int64_t     current_defender_units;
+	int64_t     max_defender_units;
+	int64_t     current_opponent_id;
+	std::string current_opponent_server_id;
+	bool        current_opponent_chest_reward;
+	int64_t     ts_last_opponent_refresh;
+	int64_t     active_battle_id;
+	int64_t     ts_last_lost_attack;
+	int64_t     current_worker_level;
+	int64_t     current_wall_level;
+	int64_t     current_barracks_level;
+	int64_t     max_barracks_level;
+	int64_t     current_gem_production_level;
+	int64_t     current_broker_level;
+	int64_t     current_robot_storage_level;
+	int64_t     room_slot_0_0;
+	int64_t     room_slot_0_1;
+	int64_t     room_slot_0_2;
+	int64_t     room_slot_0_3;
+	int64_t     room_slot_0_4;
+	int64_t     room_slot_1_0;
+	int64_t     room_slot_1_1;
+	int64_t     room_slot_1_2;
+	int64_t     room_slot_1_3;
+	int64_t     room_slot_1_4;
+	int64_t     room_slot_2_0;
+	int64_t     room_slot_2_1;
+	int64_t     room_slot_2_2;
+	int64_t     room_slot_2_3;
+	int64_t     room_slot_2_4;
+	int64_t     room_slot_3_0;
+	int64_t     room_slot_3_1;
+	int64_t     room_slot_3_2;
+	int64_t     room_slot_3_3;
+	int64_t     room_slot_3_4;
+	int64_t     room_slot_4_0;
+	int64_t     room_slot_4_1;
+	int64_t     room_slot_4_2;
+	int64_t     room_slot_4_3;
+	int64_t     room_slot_4_4;
+	int64_t     room_slot_5_0;
+	int64_t     room_slot_5_1;
+	int64_t     room_slot_5_2;
+	int64_t     room_slot_5_3;
+	int64_t     room_slot_5_4;
+	int64_t     room_slot_6_0;
+	int64_t     room_slot_6_1;
+	int64_t     room_slot_6_2;
+	int64_t     room_slot_6_3;
+	int64_t     room_slot_6_4;
+	int64_t     room_slot_7_0;
+	int64_t     room_slot_7_1;
+	int64_t     room_slot_7_2;
+	int64_t     room_slot_7_3;
+	int64_t     room_slot_7_4;
+	int64_t     room_slot_8_0;
+	int64_t     room_slot_8_1;
+	int64_t     room_slot_8_2;
+	int64_t     room_slot_8_3;
+	int64_t     room_slot_8_4;
+	int64_t     room_slot_9_0;
+	int64_t     room_slot_9_1;
+	int64_t     room_slot_9_2;
+	int64_t     room_slot_9_3;
+	int64_t     room_slot_9_4;
 };
 
 struct HideoutRoom {
@@ -1977,16 +1989,12 @@ struct Data {
 		using T                     = Data;
 		static constexpr auto value = glz::object(
 			&T::user, &T::character, &T::user_geo_location,
-			&T::has_marketing_email, &T::inventory, &T::bank_inventory);
+			&T::has_marketing_email, &T::inventory, &T::bank_inventory,
+			&T::guild, &T::guild_members);
 	};
 };
 
 struct MyLoginData {
 	Data        data;
 	std::string error;
-
-	struct glaze {
-		using T                     = MyLoginData;
-		static constexpr auto value = glz::object(&T::data, &T::error);
-	};
 };
