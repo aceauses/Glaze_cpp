@@ -1,3 +1,5 @@
 build
 .cache
 Glaze_exec
+loginData.json
+output.json

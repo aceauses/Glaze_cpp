@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_COMPILER clang++)
 
+add_compile_options(-fbracket-depth=512)
+
 add_executable(Glaze_exec main.cpp)
 
 target_include_directories(Glaze_exec PRIVATE
@@ -15,7 +17,6 @@ target_include_directories(Glaze_exec PRIVATE
 set_target_properties(Glaze_exec PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
 )
-
 target_compile_options(Glaze_exec PRIVATE
     -Wall -Wextra -fno-limit-debug-info
     -Wno-missing-braces  # Disable warning for missing braces
