@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_COMPILER clang++)
 
-add_compile_options(-fbracket-depth=512)
+add_compile_options(-fbracket-depth=1024)
 
 add_executable(Glaze_exec main.cpp)
 
