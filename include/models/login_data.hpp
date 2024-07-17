@@ -1606,29 +1606,6 @@ struct Inventory {
 	int64_t     shop2_item9_id;
 	std::string item_set_data;
 	std::string sidekick_data;
-
-	struct glaze {
-		using T                     = Inventory;
-		static constexpr auto value = glz::object(
-			&T::id, &T::character_id, &T::mask_item_id, &T::cape_item_id,
-			&T::suit_item_id, &T::belt_item_id, &T::boots_item_id,
-			&T::weapon_item_id, &T::gadget_item_id, &T::missiles_item_id,
-			&T::missiles1_item_id, &T::missiles2_item_id,
-			&T::missiles3_item_id, &T::missiles4_item_id, &T::sidekick_id,
-			&T::bag_item1_id, &T::bag_item2_id, &T::bag_item3_id,
-			&T::bag_item4_id, &T::bag_item5_id, &T::bag_item6_id,
-			&T::bag_item7_id, &T::bag_item8_id, &T::bag_item9_id,
-			&T::bag_item10_id, &T::bag_item11_id, &T::bag_item12_id,
-			&T::bag_item13_id, &T::bag_item14_id, &T::bag_item15_id,
-			&T::bag_item16_id, &T::bag_item17_id, &T::bag_item18_id,
-			&T::shop_item1_id, &T::shop_item2_id, &T::shop_item3_id,
-			&T::shop_item4_id, &T::shop_item5_id, &T::shop_item6_id,
-			&T::shop_item7_id, &T::shop_item8_id, &T::shop_item9_id,
-			&T::shop2_item1_id, &T::shop2_item2_id, &T::shop2_item3_id,
-			&T::shop2_item4_id, &T::shop2_item5_id, &T::shop2_item6_id,
-			&T::shop2_item7_id, &T::shop2_item8_id, &T::shop2_item9_id,
-			&T::item_set_data, &T::sidekick_data);
-	};
 };
 
 struct DataItem {
@@ -1829,23 +1806,11 @@ struct StreamsInfo {
 	std::map<std::string, The8612> r;
 	M                              s;
 	std::map<std::string, The8612> v;
-
-	struct glaze {
-		using T = StreamsInfo;
-		static constexpr auto value
-			= glz::object(&T::m, &T::p, &T::r, &T::s, &T::v);
-	};
 };
 
 struct TitleElement {
 	std::string identifier;
 	std::string date;
-
-	struct glaze {
-		using T = TitleElement;
-		static constexpr auto value
-			= glz::object(&T::identifier, &T::date);
-	};
 };
 
 struct Training {
@@ -1868,17 +1833,6 @@ struct Training {
 	int64_t     stat_points_star_1;
 	int64_t     stat_points_star_2;
 	int64_t     stat_points_star_3;
-
-	struct glaze {
-		using T                     = Training;
-		static constexpr auto value = glz::object(
-			&T::id, &T::character_id, &T::setting, &T::status,
-			&T::training_cost, &T::energy, &T::needed_energy,
-			&T::stat_type, &T::duration, &T::ts_end, &T::training_quest_id,
-			&T::training_quest_pool, &T::claimed_stars, &T::rewards_star_1,
-			&T::rewards_star_2, &T::rewards_star_3, &T::stat_points_star_1,
-			&T::stat_points_star_2, &T::stat_points_star_3);
-	};
 };
 
 struct User {
@@ -1901,17 +1855,6 @@ struct User {
 	bool        trusted;
 	int64_t     ts_tos_accepted;
 	int64_t     ts_pp_accepted;
-
-	struct glaze {
-		using T                     = User;
-		static constexpr auto value = glz::object(
-			&T::id, &T::registration_source, &T::ref, &T::subid,
-			&T::ts_creation, &T::network, &T::app_version,
-			&T::app_version_registration, &T::device_type, &T::confirmed,
-			&T::login_count, &T::locale, &T::premium_currency,
-			&T::geo_country_code, &T::settings, &T::status, &T::trusted,
-			&T::ts_tos_accepted, &T::ts_pp_accepted);
-	};
 };
 
 struct Data {

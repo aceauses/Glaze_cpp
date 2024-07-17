@@ -85,7 +85,7 @@ void logindata(std::string filename) {
 	err = glz::write_json(data, output_json);
 
 	std::ofstream output_file("output.json");
-	output_file << output_json;
+	output_file << glz::prettify_json(output_json);
 	output_file.close();
 
 	end_time = std::chrono::high_resolution_clock::now();
@@ -120,4 +120,7 @@ void logindata(std::string filename) {
 			  << std::endl;
 	std::cout << "Member[10] name: " << data.data.guild_members[10].name
 			  << std::endl;
+	std::cout << "\n\n";
+	std::cout << "Invetory gadget_item_id: "
+			  << data.data.inventory.gadget_item_id << std::endl;
 }
