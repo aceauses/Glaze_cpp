@@ -1709,16 +1709,6 @@ struct Quest {
 	int64_t     fight_battle_id;
 	int64_t     used_resources;
 	std::string rewards;
-
-	struct glaze {
-		using T                     = Quest;
-		static constexpr auto value = glz::object(
-			&T::id, &T::character_id, &T::identifier, &T::type, &T::stage,
-			&T::level, &T::status, &T::duration_type, &T::duration_raw,
-			&T::duration, &T::ts_complete, &T::energy_cost,
-			&T::fight_difficulty, &T::fight_npc_identifier,
-			&T::fight_battle_id, &T::used_resources, &T::rewards);
-	};
 };
 
 struct SeasonProgress {
@@ -1933,7 +1923,9 @@ struct Data {
 		static constexpr auto value = glz::object(
 			&T::user, &T::character, &T::user_geo_location,
 			&T::has_marketing_email, &T::inventory, &T::bank_inventory,
-			&T::guild, &T::guild_members);
+			&T::guild, &T::guild_members, &T::guild_competition_data,
+			&T::finished_guild_battle_defense, &T::guild_battle_guilds,
+			&T::quests);
 	};
 };
 

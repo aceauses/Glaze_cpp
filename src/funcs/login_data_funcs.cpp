@@ -1,5 +1,6 @@
 
 #include "models/login_data.hpp"
+#include <algorithm>
 #include <chrono>
 #include <fstream>
 #include <glaze/glaze.hpp>
@@ -123,4 +124,12 @@ void logindata(std::string filename) {
 	std::cout << "\n\n";
 	std::cout << "Invetory gadget_item_id: "
 			  << data.data.inventory.gadget_item_id << std::endl;
+
+	std::cout << "Quests size: " << data.data.quests.size() << std::endl;
+	std::sort(data.data.quests.begin(), data.data.quests.end(),
+			  [](const Quest& a, const Quest& b) {
+				  return a.duration < b.duration;
+			  });
+	std::cout << "Fastest quest time: " << data.data.quests[0].duration
+			  << std::endl;
 }
