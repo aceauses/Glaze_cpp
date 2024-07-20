@@ -1,4 +1,4 @@
-#include "src/funcs/login_data_funcs.cpp"
+#include "classes/loginData.hpp"
 #include <iostream>
 
 int main() {

@@ -25,7 +25,14 @@ FetchContent_MakeAvailable(glaze json)
 
 find_package(Boost REQUIRED COMPONENTS system)
 
-add_executable(Glaze_exec main.cpp)
+file(GLOB_RECURSE SRC_FILES 
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
+)
+
+add_executable(Glaze_exec 
+    main.cpp 
+    ${SRC_FILES}
+)
 
 target_include_directories(Glaze_exec PRIVATE
     ${CMAKE_SOURCE_DIR}/include
